@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LOGIN</title>
+	<link rel="stylesheet" type="text/css" href="./CSS/login.css">
+	<script type="text/javascript">
+		function show() {
+			var p = document.getElementById('pwd');
+			p.setAttribute('type', 'text');
+		}
+
+		function hide() {
+			var p = document.getElementById('pwd');
+			p.setAttribute('type', 'passsword');
+		}
+
+		var pwShow = 0;
+
+		document.getElementById("eye").addEventListener("click", function() {
+			if (pwShow == 0) {
+				pwShow = 1;
+				show();
+			}
+			else {
+				pwShow = 0;
+				hide();
+			}
+		}, false);
+	</script>
+</head>
+<body>
+	<div class="overlay">
+		<form>
+			<div class="con">
+				<header class="head-form">
+					<h2>Đăng nhập</h2>
+					<p>Sử dụng tài khoản và mật khẩu của bạn đăng nhập khung bên dưới</p>
+				</header>
+				<br>
+				<div class="field-set">
+					<span class="input-item">
+						<i class="fa fa-user"></i>
+					</span>
+					<input class="form-input" id="txt-input" type="text" placeholder="Tên đăng nhập" required>
+					<br>
+					<span class="input-item">
+						<i class="fa fa-key"></i>
+					</span>
+					<input class="form-input" type="password" placeholder="Mật khẩu" id="pwd"  name="password" required>
+					
+					<br>
+					<button class="log-in">Đăng nhập</button>
+				</div>
+			</div>
+			<div class="other">
+				<button class="btn submits frgt-pass">Quên mật khẩu</button>
+				<button class="btn submits sign-up"><a href="register.html"></a>Đăng ký<i class="fa fa-user-plus" aria-hidden="true"></i></button>
+			</div>
+		</form>
+	</div>
+
+</body>
+</html>
