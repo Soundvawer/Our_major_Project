@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 15px;
+            }
+            
+            #myBtn {
+              display: none;
+              position: fixed;
+              bottom: 15px;
+              right: 25px;
+              z-index: 99;
+              font-size: 15px;
+              border: none;
+              outline: none;
+              background-color: rgb(199, 116, 116);
+              color: white;
+              cursor: pointer;
+              padding: 15px;
+              border-radius: 4px;
+            }
+            
+            #myBtn:hover {
+              background-color: rgb(181, 194, 110);
+            }
+
+                        
+            .counter{
+            background-color:black;
+            color:yellow;
+            font-weight:bold;
+            }
+            </style>
+        <link href ="CSS/baitaplon.css" rel ="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+    </head>
+    <body>
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+        <script>
+            //Get the button
+            var mybutton = document.getElementById("myBtn");
+            
+            // When the user scrolls down 20px from the top of the document, show the button
+            window.onscroll = function() {scrollFunction()};
+            
+            function scrollFunction() {
+              if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+              } else {
+                mybutton.style.display = "none";
+              }
+            }
+            
+            // When the user clicks on the button, scroll to the top of the document
+            function topFunction() {
+              document.body.scrollTop = 0;
+              document.documentElement.scrollTop = 0;
+            }
+
+            
+
+            expireDate = new Date
+            expireDate.setMonth(expireDate.getMonth()+6)
+            jcount = eval(cookieVal("jaafarCounter"))
+            jcount++
+            document.cookie = "jaafarCounter="+jcount+";expires=" + expireDate.toGMTString()
+
+            function cookieVal(cookieName) {
+            thisCookie = document.cookie.split("; ")
+            for (i=0; i<thisCookie.length; i++){
+              if (cookieName == thisCookie[i].split("=")[0]){
+                return thisCookie[i].split("=")[1]
+              }
+            }
+            return 0
+            }
+
+            function page_counter(){
+            for (i=0;i<(7-jcount.toString().length);i++)
+            document.write('<span class="counter">0</span>')
+            for (y=0;y<(jcount.toString().length);y++)
+            document.write('<span class="counter">'+jcount.toString().charAt(y)+'</span>')
+            }
+
+
+            </script>
+        <nav>
+                <div class="container d-flex">
+                <div>
+                    <ul class="menu d-flex">
+                        <li><a href="#"><i class="fa fa-home"></i></a></li>
+                        <li><a href="#">Danh mục</a></li>
+                        <li><a href="#">Tin tức</a></li>
+                        <li><a href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="d-group d-flex">
+                    <a href="login_register.html" class="dn"><i class="fa fa-check"></i>Đăng kí </a>
+                    <a href="login_register.html" class="dn"><i class="fa fa-circle"></i>Đăng nhập </a>
+                </div>
+            </div>
+        </nav>
+        <header>
+            <div id="demo" class="carousel slide" data-ride="carousel">
+
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo" data-slide-to="1"></li>
+                  <li data-target="#demo" data-slide-to="2"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="Images/chaudoc.jpg" alt="test">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Images/chaudoc2.jpg" alt="test">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="Images/hcm.jpg" alt="test">
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+              </div>
+        </header>
+        <section>
+            <h1 class="subject">Danh mục</h1>
+
+            <div class="danhmuc">
+                <div class="items d-flex danhmuc">
+                    <figure>
+                        <a href="angiang.html" target="_blank"><img src="Images/chua.jpg" alt="test" width="360" height="360"></a>
+                        <figcaption>
+                            <h4>Miếu An Giang</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a href="pageHCM.html">
+                        <img src="Images/nhatho.jpg" alt="test" width="360" height="360">
+                        </a>
+                        <figcaption>
+                            <h4>Nhà thờ Đức Bà</h4>
+                        </figcaption>
+                    </figure>
+                    <figure>
+                        <a href="https://vinpearl.com/vi/cho-ben-thanh-o-dau-kinh-nghiem-di-cho-cho-khach-du-lich">
+                        <img src="Images/chobenthanh.jpg" alt="test" width="360" height="360"></a>
+                        <figcaption>
+                            <h4>Chợ Bến Thành</h4>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1 class="subject">Tin tức</h1>
+            <div class="danhmuc d-flex news">
+                <div class="new-item">
+                    <img src="Images/tintuc.png">
+                </div>
+                <div class="d-flex news">
+                    <div class="new-item"><img src="Images/thuduc.jpg"></div>
+                    <div class="new-item"><img src="Images/hoinghi.jpg"></div>
+                    <div class="new-item"><img src="Images/covid.jpg"></div>
+                    <div class="new-item"><img src="Images/treem.jpg"></div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1 class="subject">THANK YOU FOR VISITING OUR WEBSITE</h1>
+            <div class="danhmuc d-flex myweb">
+            <div class="ok">
+                <i class="fa fa-calendar"></i>
+                <h3>Số lần truy cập</h3>
+                <b><SCRIPT>page_counter(jcount);</SCRIPT> lần.</b>
+            </div>
+            <div class="ok">
+                <i class="fa fa-user"></i>
+                <h3>Số người thành lập</h3>
+                <h3 ><span>3</span></h3>
+            </div>
+            <div class="ok">
+                <i class="fa fa-book"></i>
+                <h3>Tổng số danh lam được giới thiệu</h3>
+                <h3 ><span>2</span></h3>
+            </div>
+            </div>
+            
+        </section>
+        <footer>
+            <h3 class="chiemxinhdep">HOÀNG - THỦY - HUYỀN &copy</h3>
+        </footer>
+    </body>
+</html>
