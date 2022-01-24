@@ -1,0 +1,169 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	font-family: 'Segoe UI', Tahoma, Geneva;
+	font-size: 23px;
+	line-height: 1.2;
+	color: #333;
+	text-align: justify;
+	background: #FFDA9C;
+    background: -webkit-linear-gradient(to right, #50E048, #F89E50);
+    background: linear-gradient(to right, #FAB7F1, #4FF7EB);
+}
+
+#wrapper{
+	height: auto;
+	width: 1000px;
+	margin: auto;
+}
+
+#header{
+	background: #F9D2E7;
+	height: auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+}
+
+footer{
+	background: lightpink;
+	height: auto;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
+
+#backtop{
+	width: 50px;
+	height: 50px;
+	background: lightpink;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	border-radius: 50%;
+	align-items: center;
+	position: fixed;
+	bottom: 40px;
+	right: 20px;
+	cursor: pointer;
+}
+
+ul{
+	list-style: none;
+}
+
+ul#main-menu{
+	display: flex;
+}
+
+ul#main-menu li{
+	padding: 0px 20px;
+}
+
+ul#main-menu a{
+	display: block;
+	padding: 15px 0px;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+	position: relative;
+}
+
+ul#main-menu a::after{
+	content: "";
+	height: 5px;
+	width: 0px;
+	background: #F23230;
+	position: absolute;
+	bottom: 0px;
+	left: 0;
+	transition: all 0.5s ease-in-out;
+}
+
+ul#main-menu a:hover::after{
+	width: 50%;
+	transform: translateX(100%);
+}
+
+nav{
+	margin-top: 30px;
+}
+
+p{
+	text-align: left;
+}
+
+img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	box-shadow:0px 3px 4px gray;
+}
+
+#right{
+	color: #C932FC;
+}
+
+h3{
+	text-indent: 25px;
+}
+
+h4{
+	text-indent: 50px;
+}
+
+p{
+	text-align: justify;
+	text-indent: 25px;
+}
+
+#first{
+	font-style: italic;
+}
+
+#dongho #thoigian{
+    display:flex;
+}
+#dongho #thoigian div{
+     position: relative;
+     margin: 0 5px;
+} 
+ #dongho #thoigian div span{
+    position: relative;
+    display:block;
+    width:200px;
+    height: 160px;
+    background: #2196f3;
+    color: #fff;
+    font-weight: 300;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 5rem;
+    z-index:3;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+ }
+ #dongho #thoigian span:nth-child(2){
+    height: 65px;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    z-index: 2;
+    box-shadow: none;
+    background:#127fd6;
+    text-transform: uppercase;
+ }
+ #dongho #thoigian div:last-child span {
+    background: #ff006a;
+ }
+#dongho #thoigian div:last-child span:nth-child(2) {
+    background: #ec0062;
+ }
+ #dongho #thoigian div{
+    position: relative;
+    margin: 0 5px;
+    -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
+ }
+
