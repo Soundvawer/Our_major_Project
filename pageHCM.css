@@ -8,8 +8,8 @@ body{
 	color: #333;
 	text-align: justify;
 	background: #FFDA9C;
-    background: -webkit-linear-gradient(to right, #50E048, #F89E50);
-    background: linear-gradient(to right, #FAB7F1, #4FF7EB);
+  	background: -webkit-linear-gradient(to right, #50E048, #F89E50);
+   	background: linear-gradient(to right, #FAB7F1, #4FF7EB);
 }
 
 #wrapper{
@@ -59,12 +59,11 @@ ul#main-menu{
 }
 
 ul#main-menu li{
-	padding: 0px 20px;
+	padding: 15px 20px;
 }
 
 ul#main-menu a{
 	display: block;
-	padding: 15px 0px;
 	text-transform: uppercase;
 	font-weight: bold;
 	text-decoration: none;
@@ -124,46 +123,7 @@ p{
 	font-style: italic;
 }
 
-#dongho #thoigian{
-    display:flex;
+img{
+	max-width: 100%;
+	height: auto;
 }
-#dongho #thoigian div{
-     position: relative;
-     margin: 0 5px;
-} 
- #dongho #thoigian div span{
-    position: relative;
-    display:block;
-    width:200px;
-    height: 160px;
-    background: #2196f3;
-    color: #fff;
-    font-weight: 300;
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 5rem;
-    z-index:3;
-    box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
- }
- #dongho #thoigian span:nth-child(2){
-    height: 65px;
-    font-size: 2rem;
-    letter-spacing: 0.3rem;
-    z-index: 2;
-    box-shadow: none;
-    background:#127fd6;
-    text-transform: uppercase;
- }
- #dongho #thoigian div:last-child span {
-    background: #ff006a;
- }
-#dongho #thoigian div:last-child span:nth-child(2) {
-    background: #ec0062;
- }
- #dongho #thoigian div{
-    position: relative;
-    margin: 0 5px;
-    -webkit-box-reflect: below 10px linear-gradient(transparent, #0004);
- }
-
