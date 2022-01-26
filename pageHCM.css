@@ -9,7 +9,7 @@ body{
 	text-align: justify;
 	background: #FFDA9C;
   	background: -webkit-linear-gradient(to right, #50E048, #F89E50);
-   	background: linear-gradient(to right, #FAB7F1, #4FF7EB);
+   	background: linear-gradient(to right, #3DA6F2, #6BF5E0);
 }
 
 #wrapper{
@@ -19,7 +19,7 @@ body{
 }
 
 #header{
-	background: #F9D2E7;
+	background: #F2C624;
 	height: auto;
 	text-align: center;
 	display: flex;
